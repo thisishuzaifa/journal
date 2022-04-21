@@ -1,0 +1,43 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-journal-dev-01634-authRole",
+      "UnauthRoleArn": "arn:aws:iam::617475166456:role/amplify-journal-dev-01634-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::617475166456:role/amplify-journal-dev-01634-authRole",
+      "Region": "ca-central-1",
+      "DeploymentBucketName": "amplify-journal-dev-01634-deployment",
+      "UnauthRoleName": "amplify-journal-dev-01634-unauthRole",
+      "StackName": "amplify-journal-dev-01634",
+      "StackId": "arn:aws:cloudformation:ca-central-1:617475166456:stack/amplify-journal-dev-01634/7b712c20-bee7-11ec-874e-02b86eddb988",
+      "AmplifyAppId": "d2m4ayb1c0pzvz",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-journal-dev-01634-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-journal-dev-01634-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "function": {
+        "journalLambda": {
+          "deploymentBucketName": "amplify-journal-dev-01634-deployment",
+          "s3Key": "amplify-builds/journalLambda-676e7247504c4a746a52-build.zip"
+        },
+        "journaldatabaseLayer": {
+          "deploymentBucketName": "amplify-journal-dev-01634-deployment",
+          "s3Key": "amplify-builds/journaldatabaseLayer-LambdaLayerVersionb6bd7493-build.zip"
+        },
+        "journale444174ePreSignup": {
+          "deploymentBucketName": "amplify-journal-dev-01634-deployment",
+          "s3Key": "amplify-builds/journale444174ePreSignup-2f6534525677576f3946-build.zip"
+        }
+      },
+      "auth": {
+        "journale444174e": {},
+        "true": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2m4ayb1c0pzvz",
+          "type": "cicd"
+        }
+      }
+    }
+  }
+}

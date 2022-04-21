@@ -1,0 +1,36 @@
+{
+  "trigger": true,
+  "modules": [
+    "custom"
+  ],
+  "parentResource": "journale444174e",
+  "functionName": "journale444174ePreSignup",
+  "resourceName": "journale444174ePreSignup",
+  "parentStack": "auth",
+  "triggerEnvs": [],
+  "triggerDir": "C:\\Users\\Huzaifa Khalid\\AppData\\Roaming\\npm\\node_modules\\@aws-amplify\\cli\\node_modules\\@aws-amplify\\amplify-category-auth\\provider-utils\\awscloudformation\\triggers\\PreSignup",
+  "triggerTemplate": "PreSignup.json.ejs",
+  "triggerEventPath": "PreSignup.event.json",
+  "roleName": "journale444174ePreSignup",
+  "skipEdit": true,
+  "enableCors": false,
+  "lambdaLayers": [
+    {
+      "type": "ProjectLayer",
+      "resourceName": "journaldatabaseLayer",
+      "env": "dev",
+      "version": "Always choose latest version",
+      "isLatestVersionSelected": true
+    }
+  ],
+  "permissions": {
+    "storage": {
+      "journalDB": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  }
+}

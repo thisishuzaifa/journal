@@ -1,0 +1,16 @@
+{
+  "resourceName": "journalBucket",
+  "policyUUID": "538d3fc7",
+  "bucketName": "journal7f17290ebd0c4e629e7bb57ae9c6aa13",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
