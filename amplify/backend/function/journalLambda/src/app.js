@@ -161,7 +161,7 @@ app.delete('/posts/bucketList/:id', async function (req, res) {
   console.log("post id: " + postId)
   try {
     const authUser = await getAuthUser(req)
-    const result = await database.removeFromBucketList(authUser.Username, postId)
+    const result = await database.removePostFromBucketList(authUser.Username, postId)
     console.log("Result: " + JSON.stringify(result))
     res.send({ message: "deleted successfully", postId: postId })
   } catch (error) {

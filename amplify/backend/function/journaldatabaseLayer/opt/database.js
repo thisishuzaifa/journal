@@ -34,7 +34,7 @@ exports.createUser = createUser
 
 
 async function createPost(username, description, imageName) {
-    console.log("IN CREATE POST IN DB")
+    console.log("Create post in DB")
     const Item = {
       PK: "USER#" + username,
       SK: "POST#" + ulid(),
@@ -108,23 +108,23 @@ exports.getPosts = getPosts
 
 
 async function updatePost(username, postId, newDescription) {
-    let params = {
-      TableName: tableName,
-      Key: {
-        PK: "USER#" + username,
-        SK: "POST#" + postId
-      },
+  let params = {
+    TableName: tableName,
+    Key: {
+      PK: "USER#" + username,
+      SK: "POST#" + postId
+    },
 
-      UpdateExpression: "SET description = :newDescription",
-      ExpressionAttributeValues: {
-        ":newDescription": newDescription
-      },
-      ReturnValues: "UPDATED_NEW"
-    }
-    const result = await dynamodb.update(params).promise()
-    console.log(result)
-    return result
+    UpdateExpression: "SET description = :newDescription",
+    ExpressionAttributeValues: {
+      ":newDescription": newDescription
+    },
+    ReturnValues: "UPDATED_NEW"
   }
+  const result = await dynamodb.update(params).promise()
+  console.log(result)
+  return result
+}
 exports.updatePost = updatePost
 
 

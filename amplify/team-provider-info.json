@@ -17,11 +17,11 @@
       "function": {
         "journalLambda": {
           "deploymentBucketName": "amplify-journal-dev-01634-deployment",
-          "s3Key": "amplify-builds/journalLambda-676e7247504c4a746a52-build.zip"
+          "s3Key": "amplify-builds/journalLambda-386b597a635654664975-build.zip"
         },
         "journaldatabaseLayer": {
           "deploymentBucketName": "amplify-journal-dev-01634-deployment",
-          "s3Key": "amplify-builds/journaldatabaseLayer-LambdaLayerVersionb6bd7493-build.zip"
+          "s3Key": "amplify-builds/journaldatabaseLayer-LambdaLayerVersionc1aa3892-build.zip"
         },
         "journale444174ePreSignup": {
           "deploymentBucketName": "amplify-journal-dev-01634-deployment",
