@@ -108,7 +108,7 @@ app.put('/posts/update/:id', async (req, res) => {
 });
 
 
-app.delete('/posts/delete/:id', async function (req, res) {
+app.delete('/posts/delete/:id', async (req, res) => {
   const postId = req.params.id;
   console.log("post id: " + postId)
   try {
@@ -116,18 +116,16 @@ app.delete('/posts/delete/:id', async function (req, res) {
     const post = await database.getPost(authUser.Username, postId)
     console.log(post)
     if (Object.keys(post).length === 0) {
-      res.status(403).send({ error: "Cannot delete" })
-    } else {
-      const result = await database.deletePost(authUser.Username, postId)
-      console.log("Result: " + JSON.stringify(result))
-      res.send({ message: "deleted successfully", postId: postId })
+      return res.status(403).send({ error: "Cannot delete" })
     }
+    const result = await database.deletePost(authUser.Username, postId)
+    console.log("Result: " + JSON.stringify(result))
+    res.send({ message: "deleted successfully", postId: postId })
   } catch (error) {
     console.log(error)
     res.status(500).send(error)
   }
 });
-
 
 // endpoints for bucket list
 
